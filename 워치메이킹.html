@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>워치메이킹</title>
+  <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+  <link rel="stylesheet" href="css/워치메이킹.css">
+  <link rel="stylesheet" href="css/swiper.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+</head>
+<body>
+  
+  <header>
+		<div class="trigger">
+			<span class="material-symbols-outlined icon1">menu</span>
+		</div>
+		<h1><a href="index.html"><img src="image/logo.png" alt="logo"></a></h1>
+	
+			<ul class="gnb_list">
+				<li><a href="index.html">CHANEL인터스텔라</a></li>
+				<li><a href="나만의워치.html">나만의 워치</a></li>
+        <li><a href="워치메이킹.html">워치메이킹</a></li>
+        <li><a href="J12.html">COLLECTION</a></li>
+				<li><a href="부티크.html">서비스 및 부티크</a></li>
+				<li><a href="역사.html">샤넬 소개</a></li>
+				<li class="close"><span class="material-symbols-outlined icon2">close</span></li>
+			</ul>
+			<div class="back"></div><!-- 메뉴뒤로 나오는 검정배경(opacity )-->
+		</header>
+
+<main>
+  <div class="main-text">
+  <h3>화인 워치메이킹</h3>
+  <h5>
+    여성의 매력과 함께 박동하는 대담하고 자유로운 독창성을 표현합니다. 샤넬만의 탁월한 전문 기술로 완성된 특별한 워치를 만나보세요. <br></h5>
+    <a href="">자세히 보기</a>
+</div>
+
+<div class="slider">
+  <input type="radio" name="slide" id="slide1" checked>
+  <input type="radio" name="slide" id="slide2">
+  <input type="radio" name="slide" id="slide3">
+  <input type="radio" name="slide" id="slide4">
+  <ul id="imgholder" class="imgs">
+      <li><img src="image/p1.jpg" alt=""></li>
+      <li><img src="image/p2.jpg" alt=""></li>
+  </ul>
+  <div class="btn">
+      <label for="slide1"></label>
+      <label for="slide2"></label>
+  </div>
+</div>
+</main>
+
+<!-- 갤러리 -->
+<div class="box5">
+  <ul>
+    <li>
+      <img src="image/j12white.jpg" alt="">
+      <div class="text1">
+        <h3>J12 WHITE 시리즈</h3>
+        <p>가장 완벽한 화이트</p>
+        <a href="J12.html">자세히보기</a>
+      </div>
+    </li>
+    <li>
+      <img src="image/j12black.jpg" alt="image1">
+      <div class="text1">
+        <h3>J12 BLACK 시리즈 </h3>
+        <p>견고한 블랙의 아름다움</p>
+        <a href="J12.html">자세히보기</a>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<div class="text2">
+<h3>방돔 광장13번지</h3>
+<h5>샤넬 워치 & 화인 주얼리를 위한 플래그쉽 부티크인 방돔 광장 18번지의 맨션에서는 크리에이션 스튜디오, 하이 주얼리 공방 Patrimoine, 새로운 부티크를 만나볼 수 있습니다. 꿈이 실현되는 전설적인 공간을 만나보세요.</h5>
+<a href="부티크.html">자세히보기</a>
+</div>
+<div class="bottom">
+  <div class="black">
+    <div class="btext">
+      <h4><strong>리미티드 에디션 7종 출시</strong><br><a href="">신제품 보러가기</a></h4> 
+      </div>
+    <img src="image/new.webp" alt="">
+    <h5>NEW INTERSTELLAR </h5>
+  </div>
+</div>
+
+  <a href="#" class="btn-top"><i class="fa fa-arrow-up"></i></a>
+
+
+<!-- script source-->
+<script src="js/jquery-3.6.3.min.js"></script>
+<script src="js/jquery-migrate-1.4.1.min.js"></script>
+<script src="js/jquery-ui-1.10.4.custom.min.js.js"></script>
+<script src="js/prefixfree.min.js"></script>
+<script src="js/mobile3.js"></script>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/swiper.js"></script>
+<script src="js/slide5.js"></script>
+
+<script>
+
+  $('.center').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+				
+  </script>
+  
+
+</body>
+</html>

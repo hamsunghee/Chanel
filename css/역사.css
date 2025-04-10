@@ -1,0 +1,153 @@
+@import url(common.css);
+
+body{
+  background: #0f0f0f;
+}
+
+header{
+  width: 100%;
+  height: 60px;
+  /* background-color: #34343d; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 200;
+}
+
+/* 뒤배경 어둡게 */
+.back{
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 150;/* 헤더보다는 높아야하고 메뉴보다 낮아야함 */
+}
+header h1{padding-right:20px;}
+header h1 img{
+  width: 130px;
+  height: 25px;
+  margin-top: 10px;
+}
+
+/* Trigger ///////////////*/
+.trigger {
+  padding-left: 10px;
+  cursor: pointer;
+}
+.trigger .icon1,.icon2{
+  color: #fff;
+  font-size: 36px;
+}
+
+/* Menu//////////////////// */
+.gnb_list{   
+  position:fixed; 
+  top:0;
+  left: -60%;   
+  z-index: 200;
+  width:60%;
+  height: 100vh;
+  background:rgba(0,0,0,0.9)
+}
+.gnb_list li:first-child{margin-top: 80px;} /* 첫번째만 내리면 다 내려감 */
+.gnb_list li{padding: 10px 0;}
+.gnb_list li a{
+  display:block; 
+  font-size:16px;  /* 생략 가능함 */
+  font-size:1rem; 
+  color:#fff; 
+  text-transform:uppercase;
+  text-align:center;
+  transition: 0.5s;
+}
+.gnb_list li a:hover{color:rgba(185, 185, 185, 0.822)}
+
+.gnb_list li.close{ /* 닫기버튼 */
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.main-txt h1{
+  width: 100%;
+  font-size: 23px;
+  padding: 20px;
+  height: 200px;
+  line-height: 25px;
+  text-align: center;
+  color: #fff;
+  font-weight: normal;
+}
+
+.txt{
+  color: #fff;
+  text-align: center;
+  opacity: 0;
+  transition: 0.5s;
+  padding: 20px;
+}
+.txt img{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+}
+.txt h1{
+  width: 100%;
+  margin-top: 50px
+}
+
+.txt h2{
+  width: 100%;
+  font-weight: normal;
+}
+
+.txt h3{
+  width: 100%;
+  margin: auto;
+  font-weight: normal;
+
+}
+.main img{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+/*  푸터 */
+.btn-top{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 26px;
+  color: #fff;
+  background-color: #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 37px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.btn-top.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+.btn-top:hover{
+  color: #000;
+  background-color: #fff;
+}
+section p{
+  font-size: 3em;
+  color: #ddd;
+  line-height: 2em;
+}

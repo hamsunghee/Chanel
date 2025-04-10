@@ -1,0 +1,460 @@
+@import url(common.css);
+
+*{box-sizing: border-box;}
+/*--------------->>Header<<---------- */
+body{
+	background: url(../image/배경.jpg);
+  font-family: couture;
+}
+header{
+  width: 100%;
+  height: 60px;
+  /* background-color: #34343d; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 200;
+}
+
+/* 뒤배경 어둡게 */
+.back{
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 150;/* 헤더보다는 높아야하고 메뉴보다 낮아야함 */
+}
+header h1{padding-right:20px;}
+header h1 img{
+  width: 130px;
+  height: 25px;
+  margin-top: 5px;
+}
+
+/* Trigger ///////////////*/
+.trigger {
+  padding-left: 10px;
+  cursor: pointer;
+}
+.trigger .icon1,.icon2{
+  color: #fff;
+  font-size: 36px;
+}
+
+/* Menu//////////////////// */
+.gnb_list{   
+  position:fixed; 
+  top:0;
+  left: -60%;   
+  z-index: 200;
+  width:60%;
+  height: 100vh;
+  background:rgba(0,0,0,0.9)
+}
+.gnb_list li:first-child{margin-top: 80px;} /* 첫번째만 내리면 다 내려감 */
+.gnb_list li{padding: 10px 0;}
+.gnb_list li a{
+  display:block; 
+  font-size:16px;  /* 생략 가능함 */
+  font-size:1rem; 
+  color:#fff; 
+  text-transform:uppercase;
+  text-align:center;
+  transition: 0.5s;
+}
+.gnb_list li a:hover{color:rgb(165, 165, 165)}
+
+.gnb_list li.close{ /* 닫기버튼 */
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  cursor: pointer;
+}
+
+
+.clock{
+  font-weight: normal;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  bottom: -150%;
+  transform: translateY(150%);
+  color:#fff;
+  font-family:sans-serif;
+}
+
+#clock{
+  font-size:25px;
+}
+#apm{
+  font-size: 10px;
+}
+.main h1{
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  font-size: 19px;
+  color: #fff; 
+  bottom: -300%;
+  transform: translateY(300%);
+}
+
+.main img{ 
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+	margin: auto;
+}
+
+/* 내려가는 스크롤 애니메이션_________________ */
+
+/*마우스휠 animation*/
+@keyframes line_down{ 
+  from{opacity:1;top:10px;}
+  to{opacity:0;top:40px;}
+}
+
+/*화살표 animation*/
+@keyframes arrow_down{  
+  0%{opacity:0;}
+  100%{opacity:1}
+  0%{opacity:0;}
+}
+
+.mouseBox{
+  position:relative; /*부모설정*/
+	display: flex;
+	text-align: center;
+	justify-content: center;
+  width:100%;
+  height:300px;
+  left: 45%;
+  top: 0;
+  transform: translateX(-50%);
+  /* background:yellow; */
+}
+
+.arrow1, .arrow2, .arrow3{
+	width: 100%;
+	margin: auto;
+	/* border: 1px solid red; */
+	color: #fff;
+  position:absolute;
+	margin-top: -250px; 
+  animation:arrow_down 1s infinite alternate; 
+	/*0%->100%->0%*/
+}
+.arrow1{
+  top:70px;
+  left:23px;
+  animation-delay:1s;
+}
+.arrow2{
+  top:90px;
+  left:23px;
+  animation-delay:1.5s;
+}
+.arrow3{
+  top:110px;
+  left:23px;
+  animation-delay:2s;
+}
+
+/*  */ 
+
+.text{
+	width: 100%;
+	height: 300px;
+	color:#fff;
+	/* display: flex; */
+	text-align: center;
+	justify-content: center;
+}
+.txt{
+	float:left;
+	width: 50%;
+	/* margin-left: 120px; */
+	/* border: 1px solid red; */
+}
+
+.hand{
+  width: 40%;
+	float:right;
+	height: 500px;
+  margin-left: -10px;
+}
+
+/* __________________________scroll*/
+
+.parent {
+	margin-top: -100px; 
+  /* border: 1px solid red; */
+  width: 100%;
+	height: 700px;
+  overflow: hidden;
+}
+.parent h3{
+	color: #fff;
+	font-size: 15px;
+	font-weight: normal;
+	margin: 130px 0px 0px 10px;
+	/* border: 1px solid red; */
+}
+.parent div {
+  float: left;
+  /* border: 3px solid red; */
+  width: 50%;  
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 3em;
+}
+.ltr {animation: ltr 1.5s linear both;}
+.right img{
+  height: 450px;
+}
+.rtl {
+	animation: rtl 1.5s linear both;
+	width: 100%;
+}
+@keyframes ltr {
+  0% {
+  opacity: 0;
+	transform: translateX(-150px);
+  }
+  100% {
+	opacity: 1;
+  transform: translateX(0);
+  }
+}
+@keyframes rtl {
+	0% {
+  opacity: 0;
+  transform: translateX(150px);
+  }
+  100% {
+  opacity: 1;
+	transform: translateX(0);
+  }
+}
+/* _____________________자세히 보기 버튼  */
+.frame {
+  width: 100%;
+	display: flex;
+	justify-content: space-between;
+  text-align: center;
+  right: -50%;
+  transform: translateX(50%);
+	margin-top: -90px;
+}
+button {
+  margin: 20px;
+  outline: none;
+}
+
+.custom-btn {
+  width: 120px;
+  height: 40px;
+  margin-top: 120px;
+  border: 1px solid #fff;
+	color: #fff;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+.btn-11 {
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.btn-11:hover {
+  background:#222;
+  color: #fff;
+}
+.btn-11:before {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    top: -180px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    animation: shiny-btn1 3s ease-in-out infinite;
+}
+.btn-11:active{
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
+              -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+}
+
+@-webkit-keyframes shiny-btn1 {
+	0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+	80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+	81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+	100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+}
+
+.btn2{
+	width: 55%;
+  margin-top:-400px;
+
+	/* height: 200px; */
+  /* margin: -400px 10px 0px -200px; */
+}
+
+/*____________________________benner */
+.banner{  /*배너전체영역*/
+	position:relative;
+	width: 100%;
+	height: 550px;
+  overflow:hidden;
+	/* background:yellow;	  */
+}
+
+.banner .ban{   /*슬라이드영역*/
+	width:1030px; /*보여주는 폭을 줄이고자 할때 가로폭을 맞춰서 줄여줌*/
+	/* height:120px; */
+	/* width: 100%; */
+	height: 250px; 
+	overflow:hidden;
+	position: absolute;
+	top: 15px;
+	left: 20px;
+/* 	background:orange;	  */
+}
+
+.banner .ban ul{
+  overflow:hidden;
+  height: 250px; 
+  width:2600px; /* width:2600px;총길이=250*10+여백포함(10*10=100) */
+	position:relative;
+	/* left:-260px;   */
+	left: -150px;
+	/*html의 이미지목록에서 끊기지 않고 이어지는 이미지를 위해서 맨 마지막 이미지를 맨 앞에 두었지만,
+	실행화면에 보이는 이미지는 첫번째 이미지어야 하므로, 
+	맨 마지막 이미지를 맨앞에 넣어둔것을 다시 왼쪽으로(left:-255px) 밀어둠 */
+}
+.banner .ban ul li{
+	float:left;
+	margin-right:10px;
+	width:250px;   /*이미지가로크기*/
+	height:120px;  /*이미지세로크기*/
+}
+
+/*좌우버튼*/
+.ban_left{
+	position:absolute;
+	top:120px;
+	left:30px;
+	cursor:pointer;
+}
+.ban_right{
+	position:absolute;
+	top:120px;
+	right:30px;
+	cursor:pointer;
+}
+.ban_btn span{
+	display:inline-block;
+	width:17px;
+	height:27px;	
+}
+.ban_btn .ban_left{background:url(../image/화살표1.png) no-repeat;
+	transition: 0.35s;
+}
+.ban_btn .ban_right{background:url(../image/화살표2.png) no-repeat;
+	transition: 0.35s;
+}
+
+.ban_btn .ban_left:hover{opacity: 0.2;}
+.ban_btn .ban_right:hover{opacity: 0.2;}
+
+
+/*------>>Footer<<----- */
+
+/*  푸터 */
+.btn-top{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 26px;
+  color: #fff;
+  background-color: #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 37px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.btn-top.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+.btn-top:hover{
+  color: #000;
+  background-color: #fff;
+}
+section p{
+  font-size: 3em;
+  color: #ddd;
+  line-height: 2em;
+}
+
+/*test  */
+
+/*------>> Cintent banner Slick.js plug-in <<------- */
+
+#gallery2{
+  width: 100%;
+  /* background-color: yellow; */
+}
+h3.stitle{
+  text-align: center;
+  color:#000;
+  font-size: 24px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding: 20px 0;
+}
+
+.myslider{
+  padding-bottom: 30px;
+}
+.myslider div{margin: 0 2px;}
+.myslider div:last-child{margin: 0px;}
+.myslider img{
+  width: 100%; 
+  max-width: 100%; /*사이즈맞게 변경됌 가변이미지:백그라운드 적용x :cover활용 */
+}
+
+.myslider .slick-arrow{
+  /* border: 1px solid green; */
+  bottom:0;
+  width: 40px;
+  height: 40px;
+}
+
+.myslider .slick-prev{
+  left: 10px;
+  top: -10%;
+}
+.myslider .slick-next{
+  right: 10px;
+  top: -10%;
+}
+
+.slick-next:before, .slick-prev::before{
+  color: #000;
+  font-weight: bold;
+}

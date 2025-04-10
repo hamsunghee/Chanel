@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/역사.css">
+  <title>HISTORY</title>
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+
+</head>
+<body>
+
+  <header>
+		<div class="trigger">
+			<span class="material-symbols-outlined icon1">menu</span>
+		</div>
+		<h1><a href="index.html"><img src="image/logo.png" alt="logo"></a></h1>
+	
+			<ul class="gnb_list">
+				<li><a href="index.html">CHANEL인터스텔라</a></li>
+				<li><a href="나만의워치.html">나만의 워치</a></li>
+        <li><a href="워치메이킹.html">워치메이킹</a></li>
+        <li><a href="J12.html">COLLECTION</a></li>
+				<li><a href="부티크.html">서비스 및 부티크</a></li>
+				<li><a href="역사.html">샤넬 소개</a></li>
+				<li class="close"><span class="material-symbols-outlined icon2">close</span></li>
+			</ul>
+			<div class="back"></div><!-- 메뉴뒤로 나오는 검정배경(opacity )-->
+		</header>
+
+
+<div class="main"><img src="image/inside.gif" alt=""></div>
+
+<div class="txt">
+  <img src="image/샤넬2.png" alt="">
+  <h2>  "내 손끝에서 피어난 전설이 더 발전하고 번성하기를 꿈꾸며, 샤넬이 오랫동안 행복한 브랜드로 남기를 바란다."</h2></div>
+<div class="txt">
+  <img src="image/1971.png" alt="">
+  <h1>1883</h1></div>
+  <div class="txt">
+<h3>가브리엘 샤넬의 탄생 : 1883년 8월 19일 프랑스에서 태어났으며,
+  “코코”라는 애칭을 얻게 된 샤넬은 파리 깡봉가 21번지에
+  '샤넬 모드'라는 모자 부티크를 오픈합니다.</h3>
+</div>
+  
+<div class="txt">
+  <img src="image/1921.webp" alt="">
+  <h1>1921</h1></div>
+  <div class="txt">
+<h3>샤넬 N°5 향수 런칭 : 가브리엘 샤넬의 의뢰를 받아 조향사 에르네스트 보(Ernest Beaux)는 N°5. “여성을 상징하는 향수”의 탄생을 알렸습니다.</h3>
+</div>
+<div class="txt">
+  <img src="image/1950.png" alt="">
+  <h1>1952</h1></div>
+  <div class="txt">
+<h3>마릴린 먼로와 N°5 : “잘 때 어떤 옷을 입나요?”라는 기자의 물음에 마릴린 먼로는 “샤넬 No. 5만을 입어요.”라고 대답했고,이후 사진작가 N°5를 뿌리는 마릴린 먼로의 모습을 카메라에 담았습니다.
+</h3>
+</div>
+
+<div class="txt">
+  <img src="image/1985.png" alt="">
+  <h1>1985</h1></div>
+  <div class="txt">
+<h3>메종 데뤼 인수 : 샤넬 하우스가 처음으로 인수한 공방은 단추를 만드는 유서 깊은 제작사인 데뤼 공방이었습니다.</h3>
+</div>
+<div class="txt">
+  <img src="image/2003.webp" alt="">
+  <h1>2003</h1></div>
+  <div class="txt">
+<h3>화이트 J12 워치 런칭 : 국제적인 성공을 거둔 블랙 세라믹 J12워치를 뒤이어 화이트 세라믹 버전의 새로운 J12워치가 출시되었습니다.</h3>
+</div>
+<div class="txt">
+  <img src="image/2020.png" alt="">
+  <h1>2020</h1></div>
+  <div class="txt">
+<h3>GABRIELLE CHANEL MANIFESTE DE MODE 전시회 : 의상 박물관인 팔레 갈리에라를 무대로, 파리에서 개최한 첫번째 샤넬 회고전을 개최했습니다.</h3>
+</div>
+
+<a href="#" class="btn-top"><i class="fa fa-arrow-up"></i></a>
+
+<script>
+  
+  let observer = new IntersectionObserver ((e)=>{
+    e.forEach((박스)=>{
+      if (박스.isIntersecting){
+      박스.target.style.opacity = 1;
+      }
+    })
+  })
+
+  let div = document.querySelectorAll('.txt')
+  observer.observe(div[0])
+  observer.observe(div[1])
+  observer.observe(div[2])
+  observer.observe(div[3])
+  observer.observe(div[4])
+  observer.observe(div[5])
+  observer.observe(div[6])
+  observer.observe(div[7])
+  observer.observe(div[8])
+  observer.observe(div[9])
+  observer.observe(div[10])
+  observer.observe(div[11])
+  observer.observe(div[12])
+</script>
+<script src="js/jquery-3.6.3.min.js"></script>
+<script src="js/jquery-migrate-1.4.1.min.js"></script>
+<script src="js/jquery-ui-1.10.4.custom.min.js.js"></script>
+<script src="js/prefixfree.min.js"></script>
+<script src="js/mobile3.js"></script>
+</body>
+</html>

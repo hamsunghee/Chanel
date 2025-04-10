@@ -1,0 +1,57 @@
+@import url(common.css);
+
+.banner{  /*배너전체영역*/
+	position:relative;
+	width:1200px;
+	height:150px;
+	background:yellow;	 
+}
+
+.banner .ban{   /*슬라이드영역*/
+	width:1030px; /*보여주는 폭을 줄이고자 할때 가로폭을 맞춰서 줄여줌*/
+	height:120px;
+	overflow:hidden;
+	position: absolute;
+	top: 15px;
+	left: 100px;
+	background:orange;	 
+}
+
+.banner .ban ul{
+	width:2600px;  /* 총길이=250*10+여백포함(10*10=100) */
+	position:relative;
+	left:-260px;  
+	/*html의 이미지목록에서 끊기지 않고 이어지는 이미지를 위해서 맨 마지막 이미지를 맨 앞에 두었지만,
+	실행화면에 보이는 이미지는 첫번째 이미지어야 하므로, 
+	맨 마지막 이미지를 맨앞에 넣어둔것을 다시 왼쪽으로(left:-255px) 밀어둠 */
+}
+.banner .ban ul li{
+	float:left;
+	margin-right:10px;
+	width:250px;   /*이미지가로크기*/
+	height:120px;  /*이미지세로크기*/
+}
+
+
+/*좌우버튼*/
+.ban_left{
+	position:absolute;
+	top:60px;
+	left:30px;
+	cursor:pointer;
+}
+.ban_right{
+	position:absolute;
+	top:60px;
+	right:30px;
+	cursor:pointer;
+}
+.ban_btn span{
+	display:inline-block;
+	width:17px;
+	height:27px;	
+}
+.ban_btn .ban_left{background:url(../image/main-event-left_02.png) no-repeat;}
+.ban_btn .ban_right{background:url(../image/main-event-right_02.png) no-repeat;}
+.ban_btn .ban_left:hover{background:url(../image/main-event-left_01.png) no-repeat;}
+.ban_btn .ban_right:hover{background:url(../image/main-event-right_01.png) no-repeat;}

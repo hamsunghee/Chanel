@@ -1,0 +1,310 @@
+@import url(common.css);
+
+*{box-sizing: border-box;}
+/*--------------->>Header<<---------- */
+header{
+  width: 100%;
+  height: 60px;
+  /* background-color: #34343d; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 200;
+}
+
+/* 뒤배경 어둡게 */
+.back{
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 150;/* 헤더보다는 높아야하고 메뉴보다 낮아야함 */
+}
+header h1{padding-right:20px;}
+header h1 img{
+  width: 130px;
+  height: 25px;
+  margin-top: 10px;
+  filter: invert(100%);
+}
+
+/* Trigger ///////////////*/
+.trigger {
+  padding-left: 10px;
+  cursor: pointer;
+  filter: invert(100%);
+}
+.trigger .icon1,.icon2{
+  color: #fff;
+  font-size: 36px;
+}
+
+/* Menu//////////////////// */
+.gnb_list{   
+  position:fixed; 
+  top:0;
+  left: -60%;   
+  z-index: 200;
+  width:60%;
+  height: 100vh;
+  background:rgba(0,0,0,0.9)
+}
+.gnb_list li:first-child{margin-top: 80px;} /* 첫번째만 내리면 다 내려감 */
+.gnb_list li{padding: 10px 0;}
+.gnb_list li a{
+  display:block; 
+  font-size:16px;  /* 생략 가능함 */
+  font-size:1rem; 
+  color:#fff; 
+  text-transform:uppercase;
+  text-align:center;
+  transition: 0.5s;
+}
+.gnb_list li a:hover{color:rgb(165, 165, 165)}
+
+.gnb_list li.close{ /* 닫기버튼 */
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  cursor: pointer;
+}
+.main-text a{
+  font-size: 13px;
+  border-bottom: 1px solid #333;
+}
+.text{
+  margin-top: 100px;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}
+
+.text h4{
+  margin-top: 15px;
+  font-weight: normal;
+}
+
+.text a{border-bottom: 1px solid #333;}
+
+.bottom{
+  margin-top:80px;
+  width: 100%;
+}
+.black img{
+  width: 50%;
+  float: left;
+}
+.black h5{
+  width: 50%;
+  font-size: 13px;  
+  margin-left: -5px;
+  font-weight: bold;
+  text-align: center;
+}
+.btext h4{
+  float: right;
+  width: 50%;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 40px;
+  font-weight: normal;
+}
+.btext a{border-bottom: 1px solid #000;}
+
+/*  워치메이킹 피플*/
+.slider{
+  padding-top: 50px;
+  width: 50%;
+  height: 700px;
+  position: relative;
+  margin: 0 auto;
+  float: left;
+}
+.slider input[type=radio]{display: none;}
+
+ul.imgs{
+  padding: 0;
+  margin: 0;
+  transition: 0.35s;
+}
+ul.imgs li{
+  position: absolute;
+  left: 200px;
+  transition-delay: 0.5s;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 30px;
+}
+ul.imgs li img{
+  width: 90%;
+  height: 250px;
+  padding: 10px;
+}
+
+.btn{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); 
+  bottom: 0px;
+  top: 20px;
+  padding: 10px;
+  z-index: 2;
+}
+.btn label{
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #ddd;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  margin-top: 280px;
+  margin-left: 10px;
+}
+.slider input[type=radio]:nth-child(1):checked~.btn>label:nth-child(1){
+  background-color: #222;
+}
+.slider input[type=radio]:nth-child(2):checked~.btn>label:nth-child(2){
+  background-color:#222;
+}
+
+/* 1 */
+.slider input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(1){
+  left: 0;
+  transition: 0.75s;
+  z-index:1;
+}
+.slider input[type=radio]:nth-child(1):checked~ul.imgs>li:nth-child(2){
+  left: 130px;
+  transition: 0.75s;
+  z-index:0;
+  transform: scale(0.9);
+}
+
+/* 2 */
+.slider input[type=radio]:nth-child(2):checked~ul.imgs>li:nth-child(1){
+  left: -1px;
+  transition: 0.75s;
+  z-index:0;
+  transform: scale(0.9);
+}
+.slider input[type=radio]:nth-child(2):checked~ul.imgs>li:nth-child(2){
+  left: 0;
+  transition: 0.75s;
+  z-index:1;
+}
+.main-text{
+  width: 50%;
+  float: right;
+  top: 0;
+  text-align: center; 
+  margin-top: -25px;
+  padding: 10px;
+}
+.main-text h3,h5{font-weight: normal;}
+.main-text h3{
+  margin-top: 125px;
+  margin-bottom: 15px;
+}
+.main-text a{
+  width: 100%;
+  height: 100px;
+  border-bottom: 1px solid #000;
+}
+.main-text h4{
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* 올라오는 센터 두개 */
+.box5{
+  width: 100%;
+  height: 0px;
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 200px;
+}
+.box5 img{
+  width: 100%;
+  height: 280px;
+}
+
+.box5 ul {
+  display: flex;
+  justify-content: center;
+}
+.box5 ul li{
+  margin: 0 5px;
+  position: relative;
+  overflow: hidden;
+}
+.text1{
+  position: absolute;
+  bottom: -120px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  padding: 10px;
+  background: linear-gradient(rgba(167, 167, 167, 0.062)
+  , #000);
+  box-sizing: border-box;
+  color: #fff;
+  text-align: center;
+}
+.text1 h3{font-size: 15px;}
+.text1 p{font-size: 14px; }
+.text1 a{
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+.text2{
+  height: 300px;
+  padding-top: 100px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding :100px 20px;
+}
+.text2 a{
+  font-size: 14px;
+  border-bottom: 1px solid #000;
+}
+
+/*__________________________Footer*/
+.btn-top{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 26px;
+  color: #fff;
+  background-color: #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 37px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.btn-top.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+.btn-top:hover{
+  color: #000;
+  background-color: #fff;
+}
+section p{
+  font-size: 3em;
+  color: #ddd;
+  line-height: 2em;
+}

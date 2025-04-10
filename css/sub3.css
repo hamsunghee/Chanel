@@ -1,0 +1,249 @@
+@import url(common.css);
+@import url(index.css);
+*{box-sizing: border-box;}
+
+body{background: #fff;}
+
+header h1 img{
+  filter: invert(100%);
+}
+.trigger {filter: invert(100%);}
+main img{  /*가변이미지*/
+	width:100%; 
+	max-width:100%;
+}
+
+#gallery {
+	position: relative;
+	width: 100%;
+}
+#largeImg {
+  width: 50%;
+  height: 350px;
+}
+#largeImg img { 
+	width: inherit;
+	height: inherit;
+	object-fit: cover;
+	display:none;
+	position:absolute;
+	top:80px;
+}
+#largeImg img:first-child{display:inline;}
+.thumbs a {margin-left: 5px;}
+.thumbs a.on img{ 
+	opacity: 1;
+  border: 1px solid #ddd;
+  margin-top: 80px;
+}
+.thumbs a img {
+	width:80px;
+	height: 80px;
+  border: 1px solid #ddd;
+  margin-top: 80px;
+}
+.thumbs a:hover img {opacity: 1;}
+.right{
+  margin-right: 10px;
+  width: 50%;
+  /* border: 1px solid #000; */
+  float: right;
+  overflow: hidden;
+  line-height: 20px;
+  top:80%;
+  transform: translateY(-80%);
+  text-align: right;
+  margin-top: 60px;
+}
+.right .top h2{
+  margin-bottom: 60px;
+  text-align: center;
+  font-size: 22px;
+}
+.right .top dl{
+  font-size: 13px;
+  font-weight: bold;
+}
+.right p{
+  font-weight: normal;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.right span{
+  cursor: pointer;
+  border-bottom: 1px solid #222;
+}
+
+.right .bottom{margin-bottom: 100px;}
+.right .bottom button{
+  width: 90%;
+  border: 1px solid #eee;
+  cursor: pointer;
+  padding: 12px;
+  margin-bottom: -200px;
+  transition: 0.35s;
+}
+.right .bottom #order_btn{
+  width: 90%;
+  background: #fff;
+  color: #555;
+}
+.right .bottom #order_btn:hover{background-color: #ddd;}
+
+#title:active+.color{border-radius: 50%;}
+.color{
+  padding :10px;
+  height: 50px;
+}
+.color input[name=color]{display: none;}
+.color input[name=color] + span{
+  float: right;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: 0 2px;
+  transition: 0.35s;
+}
+.color input[name=color]:checked + span{border-radius: 50%;}
+.color1{
+  background: url(../image/black_ceramic_watches.png)no-repeat center;
+}
+.color2{
+  background: url(../image/white_ceramic_watches.png) no-repeat center;
+  border: 1px solid #eee;
+}
+.color2:active{
+  position: relative;
+  border-radius: 50%;
+  border: 1px solid #eee;
+}
+.number select{
+  padding: 5px;
+  margin: 2px;
+  margin-bottom: 10px;
+}
+.total_price{
+  text-align: right;
+}
+.total_price p{
+  margin-top: 20px;
+  font-size: 15px;
+}
+.add-cart{
+  border: 1px solid #ddd;
+  padding: 10px;  
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+  outline: none;
+  transition: 0.35s;
+}
+.add-cart:hover {
+  background-color: #ddd;
+  color: #000;
+  font-weight: bold;
+}
+
+.center{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  top: 150%;
+  height: 300px;
+  transform: translateY(-150%);
+}
+.white{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  top: 150%;
+  height: 300px;
+  transform: translateY(-150%);
+}
+.white img{width: 50%;}
+.white-text{
+  width: 50%;
+  text-align: right;
+  font-size: 14px;
+  /* padding: 10px; */
+}
+
+.center img{width: 80%;}
+.card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  width: 300px;
+  height: 400px;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 50px;
+}
+.card::after{
+  content: "";
+  width: 200px;
+  height: 77px;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  margin-top: 300px;
+  margin-bottom: -100px;
+  padding-right: 200px;
+  z-index: -20;
+}
+.card span{
+  position: absolute;
+  top:0;
+  left: calc(100% / 6 * var(--i));
+  width: calc(100% /6);
+  height: 100%;
+}
+.card img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+}
+.card img:nth-child(2),
+.card span:hover + img{
+  opacity: 1;
+  z-index: -3;
+}
+.re img{
+  width: 100%;
+  height: 100px;
+  margin-right:-685px;
+  padding-top: 650px;
+} 
+.view{
+  text-align: center;
+  margin-top: -250px;
+  padding-bottom: 80px;
+}
+
+footer{
+  width:100%;
+  padding-top: 10px;
+  background:#27272e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer img{width:120px;}
+footer .copyright{ 
+  padding:15px 0;
+  font-size:16px; 
+  font-size:1rem; 
+  color:#fff; 
+}

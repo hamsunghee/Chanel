@@ -1,0 +1,201 @@
+@import url(common.css);
+
+*{box-sizing: border-box;}
+
+/* ----------->> header <<----------- */
+body{
+	background: #000;
+  font-family: couture;
+}
+header{
+  width: 100%;
+  height: 60px;
+  /* background-color: #34343d; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 200;
+}
+
+/* 뒤배경 어둡게 */
+.back{
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 150;/* 헤더보다는 높아야하고 메뉴보다 낮아야함 */
+}
+header h1{padding-right:20px;}
+header h1 img{
+  width: 130px;
+  height: 25px;
+  margin-top: 10px;
+}
+
+/* Trigger ///////////////*/
+.trigger {
+  padding-left: 10px;
+  cursor: pointer;
+}
+.trigger .icon1,.icon2{
+  color: #fff;
+  font-size: 36px;
+}
+
+/* Menu//////////////////// */
+.gnb_list{   
+  position:fixed; 
+  top:0;
+  left: -60%;   
+  z-index: 200;
+  width:60%;
+  height: 100vh;
+  background:rgba(0,0,0,0.9)
+}
+.gnb_list li:first-child{margin-top: 80px;} /* 첫번째만 내리면 다 내려감 */
+.gnb_list li{padding: 10px 0;}
+.gnb_list li a{
+  display:block; 
+  font-size:16px;  /* 생략 가능함 */
+  font-size:1rem; 
+  color:#fff; 
+  text-transform:uppercase;
+  text-align:center;
+  transition: 0.5s;
+}
+.gnb_list li a:hover{color:rgb(165, 165, 165)}
+
+.gnb_list li.close{ /* 닫기버튼 */
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  cursor: pointer;
+}
+
+/* ----------->> Main Swiper Plug-In <<----------- */
+
+main{padding-top:60px;}  /*헤더부분을 고정해서 위에 떠 있으므로 비주얼을 헤더높이만큼 내려줌*/
+main h2{
+	padding: 90px 0;
+	text-align: center;
+	color: #fff;
+}
+main img{  /*가변이미지*/
+	width:100%; 
+	/* max-width:100%; */
+  height: 300px;
+  overflow:hidden; 
+}
+.gallery1 { /* 갤러리 전체영역 설정 */
+	overflow:hidden; 
+	position:relative; 
+	width:100%; 
+} 
+
+/* 하단버튼 */
+.gallery1 .nav1 { 
+  overflow:hidden; 
+	position: absolute; 
+	left:50%; 
+	bottom:20px; 
+  transform: translateX(-50%); 
+	text-align: center;  
+	z-index: 10; 
+} 
+.gallery1 .nav1 .swiper-pagination-bullet { /* 버튼모양설정 */
+	opacity:0.5; 
+	width:10px; 
+	height:10px; 
+	margin-left:5px; 
+	border-radius:50%;
+  border: 2px solid #fff; 
+  background-color: transparent;
+} 
+.gallery1 .nav1 .swiper-pagination-bullet-active{  /* 메뉴on 설정(현재위치활성화) */
+	background-color: rgba(0,0,0,0.7); 
+	opacity:1;
+} 
+/* .gallery2{
+  width: 100%;
+  position: relative;}  */
+
+.gallery2{
+  width: 100%;
+  overflow: hidden;
+  /* border: 1px solid red; */
+  margin-top: -204px; 
+  z-index: 200;
+}
+.gallery2 img{
+  height: 100%;
+}
+
+/* ----------->> Contents Banner  Slick.js Plug-In <<----------- */
+
+/* ----------->> contents <<----------- */
+
+#banner{
+	width: 100%;
+	height: 300px;
+}
+#banner h3{
+  color: #fff;
+  text-align: center;
+  margin-top: -180px;
+}
+#banner span{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  background: linear-gradient(rgba(167, 167, 167, 0.062), #000);
+}
+#banner img{
+	width: 100%;
+	height: 300px;
+	margin-bottom: 20px;  
+}
+#banner article{
+	flex: 1;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 45px;
+	color: #fff;
+}
+
+.btn-top{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 26px;
+  color: #fff;
+  background-color: #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 37px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 100;
+}
+.btn-top.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+.btn-top:hover{
+  color: #000;
+  background-color: #fff;
+}
+section p{
+  font-size: 3em;
+  color: #ddd;
+  line-height: 2em;
+}

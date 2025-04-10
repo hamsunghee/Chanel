@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>나만의 워치</title>
+  <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0">
+  <link rel="stylesheet" href="css/swiper.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/slick-theme.css">
+  <link rel="stylesheet" href="css/mobile1.css">
+</head>
+<body>
+  <header>
+		<div class="trigger">
+			<span class="material-symbols-outlined icon1">menu</span>
+		</div>
+		<h1><a href="index.html"><img src="image/logo.png" alt="logo"></a></h1>
+	
+			<ul class="gnb_list">
+				<li><a href="index.html">CHANEL인터스텔라</a></li>
+				<li><a href="나만의워치.html">나만의 워치</a></li>
+        <li><a href="워치메이킹.html">워치메이킹</a></li>
+        <li><a href="J12.html">COLLECTION</a></li>
+				<li><a href="부티크.html">서비스 및 부티크</a></li>
+				<li><a href="역사.html">샤넬 소개</a></li>
+				<li class="close"><span class="material-symbols-outlined icon2">close</span></li>
+			</ul>
+			<div class="back"></div><!-- 메뉴뒤로 나오는 검정배경(opacity )-->
+		</header>
+    
+<section id="banner">
+  <!-- <article>section 1</article> -->
+
+  <img src="image/j12.gif" alt="">
+  <h3>어떤 J12에게 마음을 빼앗겼나요?</h3>
+  <span></span>
+</section>
+
+  <main>
+    <!--swiper1-->
+    <h2>나만의 워치 만들기</h2>
+    <div class="gallery1">
+      <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="image/시계줄1.png" alt=""></div>
+          <div class="swiper-slide"><img src="image/시계줄2.png" alt=""></div>
+          <div class="swiper-slide"><img src="image/시계줄3.png" alt=""></div>
+          <div class="swiper-slide"><img src="image/시계줄4.png" alt=""></div>
+          <div class="swiper-slide"><img src="image/시계줄5.png" alt=""></div>
+  </div>
+    <div class="nav1">
+  </div>
+</div>
+    <div class="gallery2">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="image/j1_02.png" alt=""></div>
+      <div class="swiper-slide"><img src="image/j2_02.png" alt=""></div>
+      <div class="swiper-slide"><img src="image/j3_02.png" alt=""></div>
+      <div class="swiper-slide"><img src="image/j4_02.png" alt=""></div>
+      <div class="swiper-slide"><img src="image/j5_02.png" alt=""></div>
+  </div>
+    </div>
+</main>
+
+<a href="#" class="btn-top"><i class="fa fa-arrow-up"></i></a>
+<!-- Script Source -->
+<script src="js/jquery-3.6.3.min.js"></script>
+<script src="js/jquery-migrate-1.4.1.min.js"></script>
+<script src="js/jquery-ui-1.10.4.custom.min.js"></script> 
+<script src="js/prefixfree.min.js"></script>
+
+<script src="js/mobile3.js"></script>
+<script src="js/jquery-3.1.0.min.js"></script>
+
+<!-- Swiper Plugin -->
+<script src="js/swiper.js"></script>
+<script>
+  $(function () {
+  
+    var mySwiper1 = new Swiper ('.gallery1', {
+      loop: true, 
+      pagination: '.nav1', 
+      grabCursor: true, 
+      autoplay: 3000, 
+      effect: 'slide', 
+
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+    });
+    
+  
+  });
+  $(function () {
+  
+  var mySwiper1 = new Swiper ('.gallery2', {
+    loop: true, 
+    pagination: '.nav1', 
+    grabCursor: true, 
+    autoplay: 3000, 
+    effect: 'slide', 
+
+    nextButton: '.swiper-button-next',
+    prevButton: '.swiper-button-prev',
+  });
+  
+
+});
+  </script>
+
+  <!-- Slick.js Plugin-->
+  <script src="js/slick.js"></script>
+  <script>
+    $('.myslider').slick({
+      infinite: false,
+      slidesToShow: 4,
+      slidesToScroll: 4,
+      autoplay: false,
+      autoplaySpeed: 2000,
+      speed: 300,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+  </script>
+
+</body>
+</html>

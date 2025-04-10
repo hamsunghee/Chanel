@@ -1,0 +1,99 @@
+@import url(common.css);
+
+body{background: #000;}
+
+header{
+  width: 100%;
+  height: 60px;
+  /* background-color: #34343d; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 뒤배경 어둡게 */
+.back{
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 150;/* 헤더보다는 높아야하고 메뉴보다 낮아야함 */
+}
+header h1{padding-right:20px;}
+header h1 img{
+  width: 130px;
+  height: 25px;
+  margin-top: 10px;
+}
+
+/* Trigger ///////////////*/
+.trigger {
+  padding-left: 10px;
+  cursor: pointer;
+}
+.trigger .icon1,.icon2{
+  color: #fff;
+  font-size: 36px;
+}
+
+/* Menu//////////////////// */
+.gnb_list{   
+  position:fixed; 
+  top:0;
+  left: -60%;   
+  z-index: 200;
+  width:60%;
+  height: 100vh;
+  background:rgba(0,0,0,0.9)
+}
+.gnb_list li:first-child{margin-top: 80px;} /* 첫번째만 내리면 다 내려감 */
+.gnb_list li{padding: 10px 0;}
+.gnb_list li a{
+  display:block; 
+  font-size:16px;  /* 생략 가능함 */
+  font-size:1rem; 
+  color:#fff; 
+  text-transform:uppercase;
+  text-align:center;
+  transition: 0.5s;
+}
+.gnb_list li a:hover{color:rgb(165, 165, 165)}
+
+.gnb_list li.close{ /* 닫기버튼 */
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  cursor: pointer;
+}
+
+.shop_main img{
+  width: 100%;
+  height: 300px;
+}
+.shop span{
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  padding: 10px;  background: linear-gradient(rgba(167, 167, 167, 0.062), #000);
+}
+
+.shop h3{
+  color: #fff;
+  font-size: 25px;
+  margin-top: -140px;
+  text-align: center;
+  font-weight: normal;
+}
+
+.myslider img{
+  width: 20%;
+  height: 500px;
+}
+.gallery2 .myslider img{
+  width: 20%;
+  height: 80px;
+}
